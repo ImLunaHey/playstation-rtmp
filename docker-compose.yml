@@ -1,0 +1,18 @@
+services:
+  nginx-rtmp:
+    image: tiangolo/nginx-rtmp
+    restart: always
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "8081:80"
+      - "1935:1935"
+  dns:
+    image: strm/dnsmasq
+    restart: always
+    volumes:
+      - ./dnsmasq.conf:/etc/dnsmasq.conf
+    ports:
+      - "53:53/udp"
+    cap_add:
+      - NET_ADMIN
