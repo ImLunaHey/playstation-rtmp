@@ -41,7 +41,7 @@ Note down the IP address (e.g., `192.168.x.xxx`), as you will need it.
 Ensure you have Docker installed, then navigate to the repository folder and run:
 
 ```sh
-docker-compose -p ps5-streamer up -d
+docker-compose -p playstation-rtmp up -d
 ```
 
 This will start the necessary services in the background.
@@ -92,6 +92,6 @@ This will start the necessary services in the background.
 - Live notifications (viewer count, alerts) will not work. (This is being worked on.)
 - If you close the terminal after starting the stream, the service will keep running. To stop it manually, run:
   ```sh
-  docker-compose -p ps5-streamer down
+  docker-compose -p playstation-rtmp down
   ```
-- If you restart your computer, you can start streaming again by making sure the Docker container is running. Open Docker, go to **Containers/Apps**, find `ps5-streamer`, and start it if it's not already running.
+- If you restart your computer, you can start streaming again by making sure the Docker container is running. Open Docker, go to **Containers/Apps**, find `playstation-rtmp`, and start it if it's not already running.
